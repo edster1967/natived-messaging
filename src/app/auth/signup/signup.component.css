@@ -1,7 +1,16 @@
 mat-form-field {
-  width: 100%;
+    width: 100%;
 }
 
 mat-spinner {
-  margin: auto;
+    margin: auto;
+}
+
+.signup-hero {
+    padding-bottom: 1em;
+}
+
+.signup-hero p {
+    font-size: 1.25em;
+    text-align: center;
 }
