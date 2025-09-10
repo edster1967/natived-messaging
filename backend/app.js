@@ -8,12 +8,18 @@ const userRoutes = require("./routes/user");
 
 const app = express();
 
-mongoose.connect('<ENTER URL HERE>', { useNewUrlParser: true })
-    .then(() => {
-        console.log('connected to the database')
-    }).catch(() => {
-        console.log('connection failed')
-    });
+mongoose.connect('mongodb+srv://username:password@cluster0.xxxxx.mongodb.net/natived-messaging?retryWrites=true&w=majority', { 
+    useNewUrlParser: true,
+    useUnifiedTopology: true 
+})
+.then(() => {
+    console.log('✅ Connected to MongoDB Atlas successfully!');
+    console.log('🗄️  Database: natived-messaging');
+})
+.catch((error) => {
+    console.log('❌ MongoDB connection failed:', error.message);
+});
+
 
 
 app.use(bodyParser.json());
